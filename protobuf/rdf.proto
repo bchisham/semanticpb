@@ -1,0 +1,95 @@
+
+import "google/protobuf/descriptor.proto";
+
+//Define the vocabulary of extension options that can be applied to fields as  annotations.
+//See: https://en.wikipedia.org/wiki/Resource_Description_Framework#Vocabulary
+
+//some options apply to multiple  protobuf object type and are prefaced with type_[vocabulary item] to avoid name collisions
+
+//Define the annotations that can be applied to a service method.
+extend google.protobuf.MethodOptions {
+  optional string method_rdfs_domain = 930000;
+  optional string method_rdfs_range  = 930001;
+}
+
+//Messages and fields  are given the full set of vocabulary options.
+extend google.protobuf.MessageOptions {
+  //rdf classes
+  optional string message_rdf_xml_literal = 900000;
+  optional string message_rdf_property = 900001;
+  optional string message_rdf_statement=  900002;
+  optional string message_rdf_alt = 900003;
+  optional string message_rdf_bag = 900004;
+  optional string message_rdf_seq = 900005;
+  optional string message_rdf_list = 900006;
+  optional string message_rdf_nil = 900007;
+  //rdfs classes
+  optional string message_rdfs_resource = 910000;
+  optional string message_rdfs_literal = 910001;
+  optional string message_rdfs_class = 910002;
+  optional string message_rdfs_datatype = 910003;
+  optional string message_rdfs_container = 910004;
+  optional string message_rdfs_container_membership_property = 910005;
+
+  //rdf properties
+  optional string message_rdf_type = 920000;
+  optional string message_rdf_first =920001;
+  optional string message_rdf_subject = 920002;
+  optional string message_rdf_predicate =  920003;
+  optional string message_rdf_object = 920004;
+  optional string message_rdf_value = 920005;
+  //rdfs properties
+  optional string message_rdfs_sub_class_of = 930001;
+  optional string message_rdfs_sub_property_of = 930002;
+  optional string message_rdfs_domain = 930003;
+  optional string message_rdfs_range  = 930004;
+  optional string message_rdfs_label = 930005;
+  optional string message_rdfs_comment = 930006;
+  optional string message_rdfs_member = 930007;
+  optional string message_rdfs_see_also = 930008;
+  optional string message_rdfs_is_defined_by  = 930009;
+
+  optional string message_rdf_id = 990000;
+}
+
+extend google.protobuf.FieldOptions {
+  //rdf classes
+  optional string field_rdf_xml_literal = 900000;
+  optional string field_rdf_property = 900001;
+  optional string field_rdf_statement=  900002;
+  optional string field_rdf_alt = 900003;
+  optional string field_rdf_bag = 900004;
+  optional string field_rdf_seq = 900005;
+  optional string field_rdf_list = 900006;
+  optional string field_rdf_nil = 900007;
+  //rdfs classes
+  optional string field_rdfs_resource = 910000;
+  optional string field_rdfs_literal = 910001;
+  optional string field_rdfs_class = 910002;
+  optional string field_rdfs_datatype = 910003;
+  optional string field_rdfs_container = 910004;
+  optional string field_rdfs_container_membership_property = 910005;
+
+  //rdf properties
+  optional string field_rdf_type = 920000;
+  optional string field_rdf_first =920001;
+  optional string field_rdf_subject = 920002;
+  optional string field_rdf_predicate =  920003;
+  optional string field_rdf_object = 920004;
+  optional string field_rdf_value = 920005;
+  //rdfs properties
+  optional string field_rdfs_sub_class_of = 930001;
+  optional string field_rdfs_sub_property_of = 930002;
+  optional string field_rdfs_domain = 930003;
+  optional string field_rdfs_range  = 930004;
+  optional string field_rdfs_label = 930005;
+  optional string field_rdfs_comment = 930006;
+  optional string field_rdfs_member = 930007;
+  optional string field_rdfs_see_also = 930008;
+  optional string field_rdfs_is_defined_by  = 930009;
+
+  optional string field_rdf_id = 990000;
+
+
+
+}

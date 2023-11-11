@@ -1,0 +1,25 @@
+
+
+import "google/protobuf/descriptor.proto";
+
+
+extend google.protobuf.MethodOptions {
+  //properties
+  optional string method_owl_object_property = 800000;
+
+
+}
+
+
+extend google.protobuf.FieldOptions {
+  //classes
+  optional string field_owl_class = 800000;
+
+
+  //individuals
+  optional string field_owl_thing = 810000;
+
+  //restrictions
+  optional uint32 field_owl_min_cardinality =  820000;
+
+}
