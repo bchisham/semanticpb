@@ -1,11 +1,11 @@
-
-
+syntax="proto3";
+option go_package="github.com/bchisham/semanticpb/proto";
 import "google/protobuf/descriptor.proto";
 
 
 extend google.protobuf.MethodOptions {
   //properties
-  optional string method_owl_object_property = 800000;
+  optional string method_owl_object_property = 8900000;
 
 
 }
@@ -13,13 +13,13 @@ extend google.protobuf.MethodOptions {
 
 extend google.protobuf.FieldOptions {
   //classes
-  optional string field_owl_class = 800000;
+  optional string field_owl_class = 8800000;
 
 
   //individuals
-  optional string field_owl_thing = 810000;
+  optional string field_owl_thing = 8800001;
 
   //restrictions
-  optional uint32 field_owl_min_cardinality =  820000;
+  optional uint32 field_owl_min_cardinality =  8800003;
 
 }

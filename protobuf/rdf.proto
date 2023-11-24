@@ -1,4 +1,5 @@
-
+syntax="proto3";
+option go_package="github.com/bchisham/semanticpb/proto";
 import "google/protobuf/descriptor.proto";
 
 //Define the vocabulary of extension options that can be applied to fields as  annotations.
@@ -15,81 +16,78 @@ extend google.protobuf.MethodOptions {
 //Messages and fields  are given the full set of vocabulary options.
 extend google.protobuf.MessageOptions {
   //rdf classes
-  optional string message_rdf_xml_literal = 900000;
-  optional string message_rdf_property = 900001;
-  optional string message_rdf_statement=  900002;
-  optional string message_rdf_alt = 900003;
-  optional string message_rdf_bag = 900004;
-  optional string message_rdf_seq = 900005;
-  optional string message_rdf_list = 900006;
-  optional string message_rdf_nil = 900007;
+  optional string message_rdf_xml_literal = 9900000;
+  optional string message_rdf_property = 9900001;
+  optional string message_rdf_statement=  9900002;
+  optional string message_rdf_alt = 9900003;
+  optional string message_rdf_bag = 9900004;
+  optional string message_rdf_seq = 9900005;
+  optional string message_rdf_list = 9900006;
+  optional string message_rdf_nil = 9900007;
   //rdfs classes
-  optional string message_rdfs_resource = 910000;
-  optional string message_rdfs_literal = 910001;
-  optional string message_rdfs_class = 910002;
-  optional string message_rdfs_datatype = 910003;
-  optional string message_rdfs_container = 910004;
-  optional string message_rdfs_container_membership_property = 910005;
+  optional string message_rdfs_resource = 9910000;
+  optional string message_rdfs_literal = 9910001;
+  optional string message_rdfs_class = 9910002;
+  optional string message_rdfs_datatype = 9910003;
+  optional string message_rdfs_container = 9910004;
+  optional string message_rdfs_container_membership_property = 9910005;
 
   //rdf properties
-  optional string message_rdf_type = 920000;
-  optional string message_rdf_first =920001;
-  optional string message_rdf_subject = 920002;
-  optional string message_rdf_predicate =  920003;
-  optional string message_rdf_object = 920004;
-  optional string message_rdf_value = 920005;
+  optional string message_rdf_type = 9920000;
+  optional string message_rdf_first = 9920001;
+  optional string message_rdf_subject = 9920002;
+  optional string message_rdf_predicate =  9920003;
+  optional string message_rdf_object = 9920004;
+  optional string message_rdf_value = 9920005;
   //rdfs properties
-  optional string message_rdfs_sub_class_of = 930001;
-  optional string message_rdfs_sub_property_of = 930002;
-  optional string message_rdfs_domain = 930003;
-  optional string message_rdfs_range  = 930004;
-  optional string message_rdfs_label = 930005;
-  optional string message_rdfs_comment = 930006;
-  optional string message_rdfs_member = 930007;
-  optional string message_rdfs_see_also = 930008;
-  optional string message_rdfs_is_defined_by  = 930009;
+  optional string message_rdfs_sub_class_of = 9930001;
+  optional string message_rdfs_sub_property_of = 9930002;
+  optional string message_rdfs_domain = 9930003;
+  optional string message_rdfs_range  = 9930004;
+  optional string message_rdfs_label = 9930005;
+  optional string message_rdfs_comment = 9930006;
+  optional string message_rdfs_member = 9930007;
+  optional string message_rdfs_see_also = 9930008;
+  optional string message_rdfs_is_defined_by  = 9930009;
 
-  optional string message_rdf_id = 990000;
+  optional string message_rdf_id = 9930010;
 }
 
 extend google.protobuf.FieldOptions {
   //rdf classes
-  optional string field_rdf_xml_literal = 900000;
-  optional string field_rdf_property = 900001;
-  optional string field_rdf_statement=  900002;
-  optional string field_rdf_alt = 900003;
-  optional string field_rdf_bag = 900004;
-  optional string field_rdf_seq = 900005;
-  optional string field_rdf_list = 900006;
-  optional string field_rdf_nil = 900007;
+  optional string field_rdf_xml_literal = 9940000;
+  optional string field_rdf_property = 9940001;
+  optional string field_rdf_statement=  9940002;
+  optional string field_rdf_alt = 9940003;
+  optional string field_rdf_bag = 9940004;
+  optional string field_rdf_seq = 9940005;
+  optional string field_rdf_list = 9940006;
+  optional string field_rdf_nil = 9940007;
   //rdfs classes
-  optional string field_rdfs_resource = 910000;
-  optional string field_rdfs_literal = 910001;
-  optional string field_rdfs_class = 910002;
-  optional string field_rdfs_datatype = 910003;
-  optional string field_rdfs_container = 910004;
-  optional string field_rdfs_container_membership_property = 910005;
+  optional string field_rdfs_resource = 9950000;
+  optional string field_rdfs_literal = 9950001;
+  optional string field_rdfs_class = 9950002;
+  optional string field_rdfs_datatype = 9950003;
+  optional string field_rdfs_container = 9950004;
+  optional string field_rdfs_container_membership_property =9950005;
 
   //rdf properties
-  optional string field_rdf_type = 920000;
-  optional string field_rdf_first =920001;
-  optional string field_rdf_subject = 920002;
-  optional string field_rdf_predicate =  920003;
-  optional string field_rdf_object = 920004;
-  optional string field_rdf_value = 920005;
+  optional string field_rdf_type = 9960000;
+  optional string field_rdf_first =9960001;
+  optional string field_rdf_subject = 9960002;
+  optional string field_rdf_predicate =  9960003;
+  optional string field_rdf_object = 9960004;
+  optional string field_rdf_value = 9960005;
   //rdfs properties
-  optional string field_rdfs_sub_class_of = 930001;
-  optional string field_rdfs_sub_property_of = 930002;
-  optional string field_rdfs_domain = 930003;
-  optional string field_rdfs_range  = 930004;
-  optional string field_rdfs_label = 930005;
-  optional string field_rdfs_comment = 930006;
-  optional string field_rdfs_member = 930007;
-  optional string field_rdfs_see_also = 930008;
-  optional string field_rdfs_is_defined_by  = 930009;
+  optional string field_rdfs_sub_class_of = 9970001;
+  optional string field_rdfs_sub_property_of = 9970002;
+  optional string field_rdfs_domain = 9970003;
+  optional string field_rdfs_range  = 997004;
+  optional string field_rdfs_label = 9970005;
+  optional string field_rdfs_comment = 9970006;
+  optional string field_rdfs_member = 9970007;
+  optional string field_rdfs_see_also = 9970008;
+  optional string field_rdfs_is_defined_by  = 9970009;
 
-  optional string field_rdf_id = 990000;
-
-
-
+  optional string field_rdf_id = 99700010;
 }

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  protobuf_compiler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './protobuf:/app/proto'
+      - './vendor:/app/build'
